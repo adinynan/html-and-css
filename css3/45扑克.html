@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>扑克</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .box {
+         width: 155px;
+         height: 219px;
+         margin: 150px auto;
+         position: relative;
+       }
+
+       .box .poker {
+         position: absolute;
+         top: 0;
+         left: 0;
+         transform-origin: left top;
+         transition: all 1s linear;
+       }
+
+       .box .poker img {
+         width: 155px;
+         height: auto;
+       }
+
+       .box:hover .poker:nth-child(1) {
+         transform: rotate(60deg);
+       }
+
+       .box:hover .poker:nth-child(2) {
+         transform: rotate(120deg);
+       }
+
+       .box:hover .poker:nth-child(3) {
+         transform: rotate(180deg);
+       }
+       .box:hover .poker:nth-child(4) {
+         transform: rotate(240deg);
+       }
+
+       .box:hover .poker:nth-child(5) {
+         transform: rotate(300deg);
+       }
+
+       .box:hover .poker:nth-child(6) {
+         transform: rotate(360deg);
+       }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="poker"><img src="./image/pk1.png" alt=""></div>
+      <div class="poker"><img src="./image/pk1.png" alt=""></div>
+      <div class="poker"><img src="./image/pk1.png" alt=""></div>
+      <div class="poker"><img src="./image/pk1.png" alt=""></div>
+      <div class="poker"><img src="./image/pk1.png" alt=""></div>
+      <div class="poker"><img src="./image/pk1.png" alt=""></div>
+    </div>
+
+  </body>
+</html>

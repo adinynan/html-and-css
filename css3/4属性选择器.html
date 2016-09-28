@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>属性选择器</title>
+    <style>
+      ul {
+        list-style:  none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /*包含href属性值的a标签*/
+      /*a[href] {
+        color: red;
+      }*/
+
+      /*href必须为要求的值*/
+      /*a[href="a.mp3"] {
+        color: red;
+      }*/
+
+     /*~表示属性值必须是一空格作为分隔符的其中的一个*/
+      /*a[href~="xxx"] {
+        color: red;
+      }*/
+
+     /*  ^ 属性值的开头必须满足条件*/
+      /*a[href^="a"] {
+        color: red;
+      }*/
+
+     /*  $ 属性值的结尾必须满足条件*/
+      /*a[href$="mp3"] {
+        color: red;
+      }*/
+
+     /*  *表示只要包含指定条件就可以 */
+      /*a[href*="m"] {
+        color: red;
+      }*/
+
+      a[href|="a"] {
+        color: red;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <ul>
+      <li>
+        <a href="a.mp3">a.mp3</a>
+        <a href="b.mp3">b.mp3</a>
+        <a href="a.rmvb">a.rmvb</a>
+        <a href="">href为空</a>
+        <a href="a-mp3">a-mp3</a>
+      </li>
+    </ul>
+
+  </body>
+</html>

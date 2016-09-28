@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2d转换</title>
+    <style>
+      .f {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background: yellow;
+        transition:  all 1s linear;
+        transform-origin: left top; /*修改盒子转换的原点， 主要用于rotate旋转*/
+      }
+
+      .f:hover {
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="f"></div>
+
+  </body>
+</html>

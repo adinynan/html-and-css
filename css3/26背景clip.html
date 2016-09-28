@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>background-clip</title>
+    <style>
+     .f {
+       width: 400px;
+       height: 200px;
+       padding: 20px;
+       margin: 50px auto;
+       border: 10px dashed red;
+       background-color: yellow;
+
+       /*需要先平铺，然后再裁减。*/
+
+       background: url("./images/bg.jpg");/*背景图片完全填满盒子*/
+       /*background-clip: border-box;*/
+       /*background-clip: padding-box;*/ /*可以裁减掉padding以外的图片*/
+       background-clip: content-box;/*可以裁减掉内容以外的图片*/
+     }
+    </style>
+  </head>
+  <body>
+
+    <div class="f"></div>
+
+  </body>
+</html>

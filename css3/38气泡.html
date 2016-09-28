@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>气泡</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .f {
+        width: 300px;
+        height:  150px;
+        margin: 50px auto;
+        background: url("./image/paopao.png") left top no-repeat,
+                    url("./image/paopao.png") right bottom no-repeat;
+        background-color: blue;
+        transition: all 5s linear;
+      }
+
+      .f:hover {
+        background-position: left bottom, right top;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="f"></div>
+
+  </body>
+</html>

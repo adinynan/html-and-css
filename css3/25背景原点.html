@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>background-origin</title>
+    <style>
+     .f {
+       width: 400px;
+       height: 200px;
+       padding: 20px;
+       margin: 50px auto;
+       border: 10px dashed red;
+       background: url("./images/bg.jpg") no-repeat;
+       /*background-origin: border-box;*/
+       /*background-origin: padding-box;*/
+       background-origin: content-box;
+
+       /*使用repeat时，background-origin没作用*/
+       /*background-repeat: repeat;*/
+
+       /*此处background-position的原点由background-origin决定*/
+       /*background-position: 10px 10px;*/
+     }
+    </style>
+  </head>
+  <body>
+
+    <div class="f"></div>
+
+  </body>
+</html>

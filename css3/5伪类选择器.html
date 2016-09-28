@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伪类选择器</title>
+     <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        ul {
+          width: 204px;
+          border-left: 1px solid gray;
+          border-top: 1px solid gray;
+          margin: 100px auto;
+          list-style: none;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+          content: "";
+          display: block;
+          height: 0;
+          visibility: hidden;
+          clear:both;
+        }
+        .clearfix {
+          zoom: 1;
+        }
+
+        ul li {
+          float: left;
+          width: 50px;
+          height: 50px;
+          border-bottom: 1px solid gray;
+          border-right: 1px solid gray;
+          text-align: center;
+          line-height: 50px;
+        }
+
+        /*first-child 表示该元素必须是同辈元素的第一个*/
+        ul  li:first-child {
+          background-color: red
+        }
+
+        ul li:last-child {
+          background-color: red
+        }
+
+        ul li:nth-child(10) {
+          background-color: pink;
+        }
+        ul li:nth-child(11) {
+          background-color: blue;
+        }
+
+       /*偶数*/
+        /*ul li:nth-child(2n) {
+          background-color: yellow;
+        }*/
+
+
+        ul li:nth-child(even) {
+          background-color: yellow;
+        }
+
+      /*奇数*/
+        /*ul li:nth-child(2n+1) {
+          background-color: green;
+        }*/
+
+        ul li:nth-child(odd) {
+          background-color: green;
+        }
+
+        ul li:nth-child(3n) {
+          background-color: black;
+        }
+     </style>
+  </head>
+  <body>
+
+    <ul class="clearfix">
+      <!-- <p>四大金刚恐惧感</p> -->
+      <!-- 使用child相关伪类时，元素的位置是从1开始  -->
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+    </ul>
+
+  </body>
+</html>

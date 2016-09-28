@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>应用外部字体(我的字体有问题)</title>
+    <style>
+    @font-face {
+      font-family: "newfont";
+      src:url("./font/LiDeBiao-Xing3.eot?#iefix") format("embedded-opentype");
+      src:url("./font/LiDeBiao-Xing3.ttf"),
+      url("./font/LiDeBiao-Xing3.woff") format("woff"),
+      url("./font/LiDeBiao-Xing3.svg") format("svg"),
+      url("./font/test.ttf") format("truetype");
+    }
+
+    .myfont{
+      font-family: "newfont";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <p class="myfont">这是添加的字体样式</p>
+    <p>这是默认的字体样式</p>
+
+  </body>
+</html>

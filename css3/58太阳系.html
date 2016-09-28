@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>宇宙</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body,html {
+        height: 100%;
+        background: url("./image/bg.jpg");
+        background-size: cover;
+      }
+
+      .box {
+        width: 620px;
+        height: 620px;
+        /*border: 1px solid red;*/
+        margin: 20px auto 0;
+      }
+
+      .box ul {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .box ul li {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        border: 2px solid gray;
+        transform: translate(-50%, -50%);/*实现居中的一种方法*/
+      }
+
+      .box ul li:nth-child(1) {
+        width: 60px;
+        height: 60px;
+        background: yellow;
+        border: none;
+      }
+
+      .box ul li:nth-child(2) {
+        width: 120px;
+        height: 120px;
+        animation: move  6s linear infinite;
+      }
+
+      .box ul li:nth-child(3) {
+        width: 180px;
+        height: 180px;
+        animation: move  10s linear infinite;
+      }
+      .box ul li:nth-child(4) {
+        width: 240px;
+        height: 240px;
+        animation: move  16s linear infinite;
+      }
+      .box ul li:nth-child(5) {
+        width: 300px;
+        height: 300px;
+        background: url("./image/universe.png");
+        background-size: contain;
+        animation: move  20s linear infinite;
+      }
+
+      .box ul li:nth-child(6) {
+        width: 360px;
+        height: 360px;
+        animation: move  25s linear infinite;
+      }
+
+      .box ul li:nth-child(7) {
+        width: 420px;
+        height: 420px;
+        animation: move  30s linear infinite;
+      }
+
+      .box ul li:nth-child(8) {
+        width: 480px;
+        height: 480px;
+        animation: move  36s linear infinite;
+      }
+
+      .box ul li:nth-child(9) {
+        width: 540px;
+        height: 540px;
+      }
+
+      .box ul li:nth-child(10) {
+        width: 600px;
+        height: 600px;
+      }
+
+      .box li > span {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+
+      .box ul li:nth-child(2) span {
+        background: yellow;
+        left: 21px;
+        top: 0px;
+      }
+
+      .box ul li:nth-child(3) span {
+        background: blue;
+        left: -6px;
+        top: 63px;
+      }
+
+      .box ul li:nth-child(4) > span {
+        background: green;
+        left: -2px;
+        top: 63px;
+        animation: move  3s linear infinite;
+      }
+
+      .box ul li:nth-child(4) > span  span {
+        width: 8px;
+        height: 8px;
+        background: purple;
+        position: absolute;
+        top: -11px;
+        left: -5px;
+        border-radius: 50%;
+      }
+
+
+      .box ul li:nth-child(5)  span {
+        width: 20px;
+        height: 20px;
+        background: red;
+        top: 0;
+        left: 84px;
+      }
+
+      .box ul li:nth-child(6)  span {
+        background: white;
+        top: 0;
+        left: 118px;
+      }
+
+      .box ul li:nth-child(7) > span {
+        top: 30px;
+        left: 79px;
+        background: green;
+      }
+
+      .box ul li:nth-child(7) > span span{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        position: absolute;
+        transform: skew(45deg);
+        top: -4px;
+        left: -4px;
+      }
+
+      @keyframes move{
+        0% {
+          /*transform:  rotate(0) translate(-50%, -50%);*/
+          transform: translate(-50%, -50%)  rotate(0);
+        }
+
+        100% {
+          transform: translate(-50%, -50%)  rotate(360deg);
+        }
+      }
+
+      .box:hover ul li {
+        animation-play-state: paused;
+      }
+
+      .box:hover ul li>span {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+     <div class="box">
+        <ul>
+          <li></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span><span></span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span><span></span></span></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+     </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>线性渐变</title>
+    <style>
+       .f {
+         width: 600px;
+         height: 300px;
+         margin: 50px auto;
+         /*渐变只能代替background-image, 不能代替background-color*/
+         /*background-color: linear-gradient(to right, red, blue);*/
+
+         /*background-image: linear-gradient(to bottom, red 30%, blue 50%, green 60%,pink);*/
+         background: linear-gradient( 45deg , red 20%, blue 50%, green 60%,pink) repeat;
+         background-size: 40px 40px;
+       }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="f"></div>
+
+  </body>
+</html>

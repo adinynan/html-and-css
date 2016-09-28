@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>过渡应用</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 1000px;
+        margin: 50px auto;
+        height: 300px;
+        /*border: 1px solid red;*/
+      }
+
+      .item {
+        width: 234px;
+        height: 300px;
+        float: left;
+        position: relative;
+        top: 0;
+        margin-right: 10px;
+        transition: all  0.5s linear;
+      }
+      .item-pic {
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .item:hover {
+        box-shadow: 0 0 10px gray;
+        top: -5px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="item">
+        <img src="./image/1.jpg" alt="">
+      </div>
+
+      <div class="item">
+        <div class="item-pic"><img src="./image/2.jpg" alt=""></div>
+      </div>
+
+      <div class="item">
+        <div class="item-pic"><img src="./image/3.jpg" alt=""></div>
+      </div>
+
+      <div class="item">
+        <div class="item-pic"><img src="./image/4.jpg" alt=""></div>
+      </div>
+    </div>
+
+  </body>
+</html>

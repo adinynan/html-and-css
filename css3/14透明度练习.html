@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>透明度练习</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .box {
+         width: 320px;
+         height: 320px;
+         background: url("./image/pic.jpg");
+         margin: 50px auto;
+         position: relative;
+       }
+
+       .box:hover {
+         /*opacity: 0.2;无法控制透明颜色*/
+       }
+
+       .box:hover::before {
+         content: "";
+         width: 320px;
+         height: 320px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-color: rgba(0,0,0,0.5);
+       }
+    </style>
+  </head>
+  <body>
+
+    <div class="box"></div>
+
+  </body>
+</html>

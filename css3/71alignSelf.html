@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>align-self 属性</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      width: 1000px;
+      margin: 50px auto;
+      box-shadow:  0 0 50px gray;
+    }
+
+    .box h2 {
+      text-align: center;
+    }
+
+    .box ul {
+      min-height: 600px;
+      display: flex; /*设置是父盒子*/
+    }
+
+     .box ul li {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      margin: 20px;
+      background: pink;
+    }
+
+    .align-self ul li:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    .align-self ul li:nth-child(2) {
+      align-self: flex-end;
+    }
+
+    .align-self ul li:nth-child(3) {
+      align-self: center;
+    }
+
+    .align-self  li:nth-child(4) {
+       height: auto;
+      align-self: stretch;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <section class="box align-self ">
+      <h2>align-self</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+  </body>
+</html>

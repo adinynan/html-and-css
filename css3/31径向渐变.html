@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>径向渐变 radial-gradient</title>
+    <style>
+       .f {
+         width: 300px;
+         height: 300px;
+         margin: 50px auto;
+         /*border-radius: 150px;*/
+         /*background: radial-gradient(150px at center,  yellow 50%, blue, red);*/
+         /*background: radial-gradient(150px at left top,  yellow 50%, blue, red);*/
+
+         /* 使用像素值指定中心点*/
+         background: radial-gradient(150px at 100px 200px ,  yellow 50%, blue, red);
+       }
+
+       .f1 {
+         width: 300px;
+         height: 200px;
+         margin: 50px auto;
+         /*background: radial-gradient(150px at center,  yellow , blue, red);*/
+         /*background: radial-gradient(ellipse closest-side ,  yellow , blue, red);*/
+         background: radial-gradient(ellipse farthest-side ,  yellow , blue, red);
+       }
+    </style>
+  </head>
+  <body>
+
+    <div class="f"></div>
+    <div class="f1"></div>
+
+  </body>
+</html>

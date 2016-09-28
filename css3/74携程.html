@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>携程</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .item {
+        width: 1200px;
+        height: 90px;
+        background: pink;
+        border-radius: 10px;
+        margin: 50px auto;
+        display: flex;
+      }
+
+      .left {
+        flex: 1;
+        height: 90px;
+      }
+
+      .right {
+        flex: 2;
+        height: 90px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .right a {
+        height: 45px;
+        box-sizing: border-box;
+        width: 50%;
+        text-align: center;
+        line-height: 45px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+
+      .right a:nth-child(3) {
+        border-bottom: none;
+      }
+
+      .right a:nth-child(4) {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+
+   <div class="item">
+     <div class="left"></div>
+     <div class="right">
+       <a href="#">海外酒店</a>
+       <a href="#">海外酒店</a>
+       <a href="#">海外酒店</a>
+       <a href="#">海外酒店</a>
+     </div>
+   </div>
+  </body>
+</html>

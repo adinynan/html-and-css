@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>兄弟选择器</title>
+    <style>
+
+    .first ~ div {
+      color: red;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div>司空见惯看就是高科技</div>
+
+    <!-- 针对后边的兄弟元素有作用 -->
+    <div class="first">
+       <div>开机速度更快就看过就看到开机速度更快</div>
+    </div>
+    <div>  second div    </div>
+    <div>  third div      </div>
+
+  </body>
+</html>

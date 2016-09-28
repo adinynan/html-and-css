@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3d 旋转</title>
+    <style>
+
+      body {
+        perspective: 400px; /*产生透视效果，是给父盒子设置的, 是距离z轴的距离*/
+      }
+
+      .x {
+        width: 300px;
+        height: 226px;
+        margin: 50px auto;
+        transition: all 1s linear;
+        transform-origin: left bottom;
+      }
+
+      .x:hover {
+        transform: rotateX(180deg);
+      }
+
+      .y {
+        width: 237px;
+        height: 300px;
+        margin: 50px auto;
+        transition: all 1s;
+        transform-origin: left center;
+      }
+
+      .y:hover {
+        transform: rotateY(180deg);
+      }
+
+      .z {
+        width: 330px;
+        height: 227px;
+        margin: 50px auto;
+        transition: all 1s;
+      }
+
+      .z:hover {
+        transform: rotateZ(180deg);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="x">
+      <img src="./images/x.jpg" alt="">
+    </div>
+
+    <div class="y">
+      <img src="./images/y.jpg" alt="">
+    </div>
+
+    <div class="z">
+      <img src="./images/z.jpg" alt="">
+    </div>
+  </body>
+</html>

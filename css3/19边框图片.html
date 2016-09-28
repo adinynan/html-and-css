@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>bordr-image</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 100px;
+        margin: 50px auto;
+        border: 1px solid red;/*不知道回事*/
+        border-image-source: url("./image/border.png");
+        border-image-width: 30px; /*指定边框图片的宽度*/
+        border-image-slice:  30;/*最好等于图片中的最小图形*/
+        border-image-repeat: round; /*进行严丝合缝的平铺，不会出现不完整的*/
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box"></div>
+
+  </body>
+</html>

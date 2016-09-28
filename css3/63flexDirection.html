@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>flex-direction</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      section {
+        width: 1000px;
+        margin: 50px auto;
+        box-shadow:  0 0 50px gray;
+      }
+
+      section h2 {
+        text-align: center;
+      }
+
+      section ul {
+        min-height: 300px;
+        display: flex; /*设置是父盒子*/
+      }
+
+       section ul li {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        margin: 20px;
+        background: pink;
+      }
+
+       .row ul {
+         flex-direction: row;
+       }
+
+       .row-reverse ul {
+         flex-direction: row-reverse;
+       }
+
+       .column ul {
+         flex-direction: column;
+       }
+       .column-reverse ul {
+         flex-direction: column-reverse;
+       }
+    </style>
+  </head>
+  <body>
+
+    <section class="row">
+      <h2>row</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+
+    <section class="row-reverse">
+      <h2>row-reverse</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+
+    <section class="column">
+      <h2>column</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+
+        <section class="column-reverse">
+      <h2>column-reverse</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+  </body>
+</html>

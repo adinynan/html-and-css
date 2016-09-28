@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>风车</title>
+    <style>
+      .box {
+        width: 585px;
+        height: 585px;
+        margin: 50px auto;
+        animation-name: run;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+
+      .box:hover {
+        animation-play-state: paused;
+      }
+
+        @keyframes run {
+          from {
+            transform: rotateZ(0deg);
+          }
+
+          to {
+            transform: rotateZ(360deg);
+          }
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <img src="./image/fengche.png" alt="">
+    </div>
+
+  </body>
+</html>

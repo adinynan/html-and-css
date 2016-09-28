@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伸缩盒子应用</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 400px;
+        height: 600px;
+        border:1px solid red;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .head {
+        height: 80px;
+        background: blue;
+      }
+
+      .content {
+        flex: 1;
+        background-color: yellow;
+        display: flex;
+      }
+
+      .left {
+        flex: 1;
+        background: purple;
+      }
+
+      .right{
+        flex: 2;
+        background: red;
+      }
+
+      .foot {
+        height: 80px;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="head"></div>
+      <div class="content">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="foot"></div>
+    </div>
+
+  </body>
+</html>

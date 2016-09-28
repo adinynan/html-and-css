@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>手风琴效果</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .box {
+         width: 500px;
+         margin: 50px auto;
+         background-color: gray;
+       }
+
+       .item {
+         border-bottom: 1px solid green;
+       }
+
+       .item h3 {
+         height: 40px;
+         line-height: 40px;
+       }
+
+       .item-content {
+         height: 0px;
+         background-color: yellow;
+         transition: all 1s linear;
+       }
+
+       .item:hover .item-content {
+         height: 100px;
+       }
+
+  </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="item">
+        <h3>今日头条</h3>
+        <div class="item-content">
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>今日头条</h3>
+        <div class="item-content"></div>
+      </div>
+      <div class="item">
+        <h3>今日头条</h3>
+        <div class="item-content"></div>
+      </div>
+      <div class="item">
+        <h3>今日头条</h3>
+        <div class="item-content"></div>
+      </div>
+      <div class="item">
+        <h3>今日头条</h3>
+        <div class="item-content"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>order 属性</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      width: 1000px;
+      margin: 50px auto;
+      box-shadow:  0 0 50px gray;
+    }
+
+    .box h2 {
+      text-align: center;
+    }
+
+    .box ul {
+      min-height: 600px;
+      display: flex; /*设置是父盒子*/
+    }
+
+     .box ul li {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      margin: 20px;
+      background: pink;
+    }
+
+    /* order 值越小越靠前*/
+    .order ul li:nth-child(1) {
+      order: 4;
+    }
+
+    .order ul li:nth-child(2) {
+      order: 3;
+    }
+
+    .order ul li:nth-child(3) {
+      order: 2;
+    }
+
+    .order ul li:nth-child(4) {
+      order: 1;
+    }
+
+
+    </style>
+  </head>
+  <body>
+
+    <section class="box order">
+      <h2>order</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>align-items 属性</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      width: 1000px;
+      margin: 50px auto;
+      box-shadow:  0 0 50px gray;
+    }
+
+    .box h2 {
+      text-align: center;
+    }
+
+    .box ul {
+      min-height: 600px;
+      display: flex; /*设置是父盒子*/
+    }
+
+     .box ul li {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      margin: 20px;
+      background: pink;
+    }
+
+    .flex-start ul {
+      align-items: flex-start;
+    }
+
+    .flex-end ul {
+      align-items: flex-end;
+    }
+
+    .center ul {
+      align-items: center;
+    }
+
+    .basaeline ul {
+      align-items: baseline;
+    }
+
+    .stretch ul li {
+      height: auto;
+    }
+    .stretch ul {
+      align-items: stretch;
+    }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <section class="box flex-start">
+      <h2> flex-start</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+
+
+    <section class="box flex-end">
+      <h2> flex-end</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+
+
+    <section class="box center">
+      <h2>center</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+
+    <section class="box baseline">
+      <h2>baseline</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+
+    <section class="box stretch">
+      <h2>stretch</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+  </body>
+</html>

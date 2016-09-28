@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>after, before 伪元素</title>
+    <style>
+     * {
+       margin: 0;
+       padding: 0;
+     }
+      ul {
+        list-style: none;
+      }
+
+
+      /*before伪元素的内容被添加到了父元素的最开始*/
+      ul li:first-child::before {
+        content: "I am before aaaaaa";
+        /*visibility: hidden;*/
+      }
+      ul li:first-child::after {
+        content: "I am after  aaaaaa";
+      }
+
+      p::selection {
+        color: red;
+      }
+      p::-moz-selection {
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <ul>
+      <li> aaaaaaa</li>
+      <li> bbbbbbb</li>
+    </ul>
+
+    <p>
+      司空见惯看大家观看大家看韩国
+    </p>
+
+  </body>
+</html>

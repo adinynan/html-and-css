@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>火箭</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+       body, html{
+         height: 100%;
+       }
+       section {
+         width: 100%;
+         height: 100%;
+         background-color: lightgreen;
+       }
+
+       .f {
+         position: absolute;
+         bottom: 0px;
+         transform: translate(-200px, 200px) rotate(45deg);
+         transition: all 1s linear;
+       }
+
+       section:hover .f {
+         transform:  rotate(45deg) translate( 200px,  -500px);
+       }
+    </style>
+  </head>
+  <body>
+    <section>
+    <div class="f">
+      <img src="./image/rocket.png" alt="">
+    </div>
+  </section>
+
+  </body>
+</html>

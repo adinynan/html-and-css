@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>align-content 属性</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      width: 1000px;
+      margin: 50px auto;
+      box-shadow:  0 0 50px gray;
+    }
+
+    .box h2 {
+      text-align: center;
+    }
+
+    .box ul {
+      min-height: 600px;
+      display: flex; /*设置是父盒子*/
+      flex-wrap: wrap;
+    }
+
+     .box ul li {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      margin: 20px;
+      background: pink;
+    }
+
+    .flex-start ul {
+      align-content: flex-start;
+    }
+
+    .flex-end ul {
+      align-content: flex-end;
+    }
+
+    .center ul {
+      align-content: center;
+    }
+
+    .space-between ul {
+      align-content: space-between;
+    }
+
+    .space-around ul {
+      align-content: space-around;
+    }
+    </style>
+  </head>
+  <body>
+
+    <!-- align-content 只能用于换行的盒子 -->
+    <section class="box flex-start">
+      <h2>flex-start </h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+      </ul>
+    </section>
+
+  <section class="box flex-end">
+      <h2> flex-end</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+      </ul>
+    </section>
+
+
+    <section class="box center">
+        <h2> center</h2>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+        </ul>
+      </section>
+
+
+      <section class="box space-between">
+          <h2> between</h2>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+          </ul>
+        </section>
+
+        <section class="box space-around">
+            <h2> around</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+            </ul>
+          </section>
+  </body>
+</html>

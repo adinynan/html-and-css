@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3d 显示</title>
+     <style>
+       .box {
+         width: 300px;
+         height: 300px;
+         margin: 100px auto;
+         position: relative;
+         perspective:  400px;
+         transform-style: preserve-3d;
+         /*transform-style: flat;*/
+       }
+
+       .f {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         transition: all 1s;
+       }
+
+       .f:first-child {
+         background: yellow;
+       }
+
+       .f:last-child {
+         background: blue;
+       }
+
+       .box:hover .f:last-child {
+         transform:  rotateX(45deg) skewX(45deg);
+       }
+
+
+     </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="f"></div>
+      <div class="f"></div>
+    </div>
+
+  </body>
+</html>

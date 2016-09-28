@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>android</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 600px;
+        height: 440px;
+        background: gray;
+        margin: 100px auto;
+        padding-top: 1px;
+      }
+
+      .android {
+        width: 220px;
+        height: 380px;
+        margin: 50px auto;
+        /*border: 1px solid red;*/
+        position: relative;
+      }
+
+      .head {
+        height: 100px;
+        background-color: yellow;
+        border-radius: 100px 100px 0 0;
+        position: relative;
+      }
+
+      .head::before,
+      .head::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-color: red;
+        border-radius:  12px;
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+      }
+
+      .head::before {
+        left: 50%;
+        margin-left: -65px;
+      }
+
+      .head::after{
+        right: 50%;
+        margin-right: -65px;
+      }
+
+      .body-1 {
+        margin-top: 10px;
+        height: 180px;
+        background: yellow;
+        border-radius: 0 0 50px 50px;
+        position: relative;
+      }
+
+      .body-1::before,
+      .body-1::after {
+        content: ""; /*内容属性必须添加*/
+        display: block;
+        width: 50px;
+        height: 80px;
+        background: red;
+        border-radius: 0 0 25px 25px;
+        position: absolute;
+        bottom: -80px;
+      }
+
+      .body-1::before {
+        left: 50%;
+        margin-left: -70px;
+      }
+      .body-1::after {
+        right: 50%;
+        margin-right: -70px;
+      }
+
+      .arm {
+        width: 340px;
+        height: 150px;
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        margin-left: -170px;
+      }
+
+      .arm::before,
+      .arm::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 150px;
+        background-color: red;
+        border-radius: 25px;
+        position: absolute;
+      }
+
+      .arm::before {
+        left: 0;
+      }
+
+      .arm::after{
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="android">
+        <div class="head"></div>
+        <div class="body-1"></div>
+        <div class="arm"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

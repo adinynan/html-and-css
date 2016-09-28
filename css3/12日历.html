@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>日历应用</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       i {
+         font-style: normal;
+       }
+
+
+       .clearfix::before,
+       .clearfix::after {
+         content: "";
+         display: block;
+         height: 0;
+         visibility: hidden;
+         clear:both;
+       }
+       .clearfix {
+         zoom: 1;
+       }
+
+       .box {
+         width: 385px;
+         height: 330px;
+         padding: 40px 140px 0 12px;
+         background: url("./image/calendar.jpg");
+         margin: 50px auto;
+       }
+
+       .box span {
+         display: block;
+         text-align: center;
+         width: 51px;
+         height: 51px;
+         float: left;
+       }
+
+       .box dt span {
+         width: 55px;
+         height: 44px;
+         line-height: 44px;
+       }
+
+       .box dt,
+       .box dd {
+         border-bottom: 1px solid gray;
+       }
+
+       .box dl dd:last-child {
+         border: none;
+       }
+
+       .box dd span > b {
+         margin-top: 10px;
+         display: block;
+       }
+
+       .box dt span:nth-child(7n) {
+         color: red;
+       }
+       .box dt span:nth-child(7n-1) {
+         color: red;
+       }
+
+       .box dd span:nth-child(7n) > b {
+         color: red;
+       }
+       .box dd span:nth-child(7n-1) > b {
+         color: red;
+       }
+
+       .box dd  span i {
+         font-size: 12px;
+         color: #989898;
+       }
+
+       .today {
+         background-color: #ffBB00;
+       }
+
+
+       .box dd span {
+         border: 2px solid  transparent; /*边框提前设置好，并且设置为透明*/
+       }
+
+       .box dd span:hover {
+         border-color: #ffBB00;
+       }
+
+       .box span[date$="month"] {
+         color: #989898;
+       }
+       .box dd span[date$="month"] > b {
+         color: #989898;
+       }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <dl>
+        <dt class="clearfix">
+          <span>一</span>
+          <span>二</span>
+          <span>三</span>
+          <span>四</span>
+          <span>五</span>
+          <span>六</span>
+          <span>日</span>
+        </dt>
+        <dd class="clearfix">
+          <span date="prev-month"><b>30</b><i>十九</i></span>
+          <span><b>1</b><i>十九</i></span>
+          <span class="today"><b>2</b><i>十九</i></span>
+          <span><b>3</b><i>十九</i></span>
+          <span><b>4</b><i>十九</i></span>
+          <span><b>5</b><i>十九</i></span>
+          <span><b>6</b><i>十九</i></span>
+        </dd>
+        <dd class="clearfix">
+          <span><b>30</b><i>十九</i></span>
+          <span><b>1</b><i>十九</i></span>
+          <span><b>2</b><i>十九</i></span>
+          <span><b>3</b><i>十九</i></span>
+          <span><b>4</b><i>十九</i></span>
+          <span><b>5</b><i>十九</i></span>
+          <span><b>6</b><i>十九</i></span>
+        </dd>
+        <dd class="clearfix">
+          <span><b>30</b><i>十九</i></span>
+          <span><b>1</b><i>十九</i></span>
+          <span><b>2</b><i>十九</i></span>
+          <span><b>3</b><i>十九</i></span>
+          <span><b>4</b><i>十九</i></span>
+          <span><b>5</b><i>十九</i></span>
+          <span><b>6</b><i>十九</i></span>
+        </dd>
+        <dd class="clearfix">
+          <span><b>30</b><i>十九</i></span>
+          <span><b>1</b><i>十九</i></span>
+          <span><b>2</b><i>十九</i></span>
+          <span><b>3</b><i>十九</i></span>
+          <span><b>4</b><i>十九</i></span>
+          <span><b>5</b><i>十九</i></span>
+          <span><b>6</b><i>十九</i></span>
+        </dd>
+        <dd class="clearfix">
+          <span><b>30</b><i>十九</i></span>
+          <span><b>1</b><i>十九</i></span>
+          <span><b>2</b><i>十九</i></span>
+          <span><b>3</b><i>十九</i></span>
+          <span><b>4</b><i>十九</i></span>
+          <span date="next-month"><b>5</b><i>十九</i></span>
+          <span date="next-month"><b>6</b><i>十九</i></span>
+        </dd>
+      </dl>
+    </div>
+
+  </body>
+</html>
