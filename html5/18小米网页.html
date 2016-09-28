@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小米</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .box {
+         width: 1226px;
+         height: 460px;
+         margin: 10px auto;
+         position: relative;
+       }
+
+       .left, .right {
+         width: 41px;
+         height: 69px;
+         position: absolute;
+         top: 50%;/*相对于父盒子的高度的一半*/
+         margin-top: -34px;/*实现居中的方式*/
+         cursor: pointer;/*让鼠标变成小手显示*/
+       }
+
+       .left {
+         background: url("./xiaomi-image/arr_r1_c5.png");
+         left: 233px;
+       }
+
+       .left:hover {
+         background: url("./xiaomi-image/arrow_r1_c1.png");
+       }
+
+       .right {
+         background: url("./xiaomi-image/arr_r1_c7.png");
+         right: 0;
+       }
+
+       .right:hover {
+         background: url("./xiaomi-image/arrow_r1_c3.png");
+       }
+
+       a {
+         text-decoration:  none;
+       }
+
+       .point {
+         position: absolute;
+         width: 200px;
+         bottom: 30px;
+         left: 50%;/*距左侧的距离为父盒子宽度的一半*/
+         margin-left: -100px;/*使用定位实现水平居中的方法*/
+         text-align: center;
+       }
+
+       .point span {
+         background-color: gray;
+         width: 18px;
+         height: 18px;
+         display: inline-block;
+         margin-right: 13px;
+       }
+       .point span:hover a{
+         color: red;
+       }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="./xiaomi-image/xiaomi.jpg" alt="">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="point">
+        <span><a href="#">1</a></span>
+        <span><a href="#">2</a></span>
+        <span><a href="#">3</a></span>
+        <span><a href="#">4</a></span>
+      </div>
+    </div>
+
+  </body>
+</html>

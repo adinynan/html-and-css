@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>display</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .f1 {
+         width: 500px;
+         height: 100px;
+         background: red;
+         /*display: none;/*不占据任何页面空间*/
+         visibility: hidden;/*仅仅不可见，但是仍然占据标准流的空间*/
+       }
+       .f2 {
+         width: 500px;
+         height: 100px;
+         background: pink;
+       }
+    </style>
+  </head>
+  <body>
+
+    <div class="f1"></div>
+    <div class="f2"></div>
+  </body>
+</html>

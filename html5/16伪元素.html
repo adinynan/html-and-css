@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>清除浮动的第四种方式</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .f {
+         width: 1000px;
+         background-color: blue;
+         margin: 0 auto;
+       }
+
+        .f div.s1,
+        .f div.s2,
+        .f div.s3 {
+         width: 300px;
+         height: 100px;
+         float: left;
+       }
+
+       .f .s1 {
+         background-color: red;
+       }
+
+       .f .s2 {
+         background-color: yellow;
+       }
+
+       .f .s3 {
+         background-color: pink;
+       }
+
+       .clearfix::after,
+       .clearfix::before {
+         content: "";
+         height: 0;
+         display: block;/*不要忘记*/
+         visibility:hidden;
+         clear: both;
+       }
+       .clearfix {
+         zoom: 1;/*兼容ie*/
+       }
+
+    </style>
+  </head>
+  <body>
+
+   <!-- 使用伪元素清除浮动, 最推荐的方式  -->
+    <div class="f clearfix">
+      <div class="s1"></div>
+      <div class="s2"></div>
+      <div class="s3"></div>
+    </div>
+
+    <div class="f1">
+      价格司空见惯开始司空见惯扩大化<br/>
+      价格司空见惯开始司空见惯扩大化<br/>
+      价格司空见惯开始司空见惯扩大化<br/>
+      价格司空见惯开始司空见惯扩大化<br/>
+    </div>
+  </body>
+</html>

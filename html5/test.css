@@ -1,0 +1,6 @@
+@charset "UTF-8";
+span {
+  color: red;
+  font-size: 40px;
+  font-style: italic;
+}

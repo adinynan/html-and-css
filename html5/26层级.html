@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>层级</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 1000px;
+        height: 200px;
+        margin: 10px auto;
+      }
+
+      .box div {
+        width: 200px;
+        height: 150px;
+        border: 1px solid gray;
+        float: left;
+        margin-left: -1px;/*向左移动1px*/
+
+        /*当层级设置相同时，右边仍然大于左边的*/
+        z-index: 10;
+        position: relative;
+
+      }
+
+      .box div:hover {
+        border-color: red;
+        z-index: 11;/*要保证层级最高，那么值必须大于其他的*/
+        position: relative;/*当使用了定位时， z-index的设置才会有效*/
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--　浮动的盒子按照从左到右的顺序排列时，　默认右边的盒子的层级
+  　都要比左边的层级高  -->
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </body>
+</html>

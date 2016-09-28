@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>智能表单三</title>
+  </head>
+  <body>
+
+
+   <!-- form 的属性
+    novalidate  关闭智能提示
+    autocomplete, 两个值，on,off 用于控制是否记录之前的输入
+   -->
+
+    <!--
+     input属性：
+     form, 可以将空间添加到一个指定的form表单中
+     formaction,  给submit 添加该属性之后，会重写表单提交的action
+     placeholder: 占位符
+     readonly 只读，但是数据是有效
+     disabled 关闭，数据也无效
+     required 必须填的选
+     pattern, 用于text email url tel  使用正则表达式控制输入
+     list , 配合<datalist>标签来实现内置的提示
+     min, max  用于控制数值的范围，用于number, range
+     step, 用于控制数值的步长
+     multiple, 用于指定多选文件
+     accept , 当input的type类型为file时， 可以限定选择的文件类型
+     -->
+
+    <form action="#" method="get">
+      姓名：<input type="text" name="name" list="name-list"  placeholder="请输入中文名" required><br/><br/>
+      <datalist id="name-list">
+        <option value="zhangsan"></option>
+        <option value="wangwu"></option>
+        <option value="zhangliu"></option>
+      </datalist>
+
+      密码： <input type="password" name="passwd" value="123456" readonly><br/><br/>
+      email： <input type="email" name="email" list="email-list"><br/><br/>
+      <datalist id="email-list">
+        <option value="xxxxx@126.com"></option>
+        <option value="xxxxx@163.com"></option>
+        <option value="xxxxx@sina.com"></option>
+        <option value="xxxxx@qq.com"></option>
+      </datalist>
+
+      date: <input type="date" name="date"><br/><br/>
+      number: <input type="number" name="number" min="20"  step="2" placeholder="只能输入数值"><br/><br/>
+      range: <input type="range" min="100" max="200" name="range"><br/><br/>
+      电话： <input type="tel" name="tel" value="" pattern="\d{3}-\d{7}"><br/><br/>
+      附件： <input type="file" name="files" accept="image/*"><br/><br/>
+      <!-- 附件： <input type="file" name="files" accept="text/html"><br/><br/> -->
+      <!-- 附件： <input type="file" name="files" accept=".jpg"><br/><br/> -->
+
+       <!-- type类型编写错误时，默认变成text类型  -->
+      <!-- xxxx: <input type="xxxx" name="xxx"> -->
+      <input type="button" value="普通按钮" disabled>
+      <input type="submit" 提交>
+
+    </form>
+
+  </body>
+</html>

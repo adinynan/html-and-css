@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伪类选择器</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+
+       /* LVHA */
+      /*初始样式*/
+      a:link {
+        color: black;
+      }
+
+      /*被访问过之后的样式*/
+      a:visited {
+        color: green;
+      }
+
+      /*鼠标悬停的效果*/
+      a:hover {
+        color: pink;
+        font-size: 50px;
+      }
+
+      a:active {
+        color: yellow;
+        font-size: 30px;
+      }
+
+      p:link {
+        color: black;
+      }
+
+      /*被访问过之后的样式*/
+      p:visited {
+        color: green;
+      }
+
+      /*鼠标悬停的效果*/
+      p:hover {
+        /*background: red;*/
+      }
+
+      p:active {
+        color: yellow;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a href="https://www.baidu.com">我是百度我怕谁</a>
+    <p>p元素应用伪类样式</p>
+
+  </body>
+</html>

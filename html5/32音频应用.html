@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>audio应用</title>
+  </head>
+  <body>
+    <script>
+      function setVolume(){
+        var audio = document.getElementById("audio-1");
+        audio.volume = 0.5;
+      }
+    </script>
+
+   <!-- controls 用于显示面板
+     autoplay 自动播放
+     loop  循环播放
+     muted 静音
+   -->
+    <audio id="audio-1" controls>
+      <!-- source标签用于指定多个音频  -->
+     <source src="./music/1.mp3">   <!-- 从第一个资源寻找，找到之后，后边的资源不再加载 -->
+     <source src="./music/2.ogg">
+    </audio>
+
+    <button onclick="setVolume();">设置音量</button>
+
+  </body>
+</html>

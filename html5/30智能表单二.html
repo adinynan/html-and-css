@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>智能表单二</title>
+  </head>
+  <body>
+
+    <!-- novalidate 可以关闭智能表单  -->
+    <!-- autocomplete 默认on,可以记住之前的输入  -->
+    <form id="form-1" action="#" method="get" autocomplete="on">
+     姓名:  <input type="text" name="name"  autofocus><br/><br/>
+     eamil: <input type="email" name="email" ><br/><br/>
+     爱好： <input type="checkbox" name="hobby" checked>学习<br/><br/>
+
+     <input type="submit" value="点击提交">
+
+     <!-- formaction属性可以更改数据的提交  -->
+     <!-- <input type="submit" value="覆盖之前的提交" formaction="test01.cgi"> -->
+    </form>
+
+     <!--  表单控件通过form属性指定对应的额form表单id值，就可以认为是在该表单中 -->
+    其他：<input type="text" name="other" value="" form="form-1">
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>智能表单一</title>
+  </head>
+  <body>
+
+    <form action="#" method="get">
+
+      <!-- 使用label包含input时，添加label可以直接让input获得输入焦点  -->
+      <label> 请输入邮箱：<input type="email" name="email" value=""></label><br/><br/>
+
+
+      <label for="passwd-id">请输入密码:</label>
+      <input id="passwd-id" type="password" name="passwd" value=""><br/><br/>
+
+
+      <label >输入url:  <input type="url" name="url" value=""></label><br/><br/>
+
+
+     <!-- step属性用于指定增加或减少的步伐  -->
+      <label>请输入年龄： <input type="number" name="age" min="18" max="65" step="1" value=""></label><br/><br/>
+
+
+      <label> 薪资范围： <input type="range" min="10000" max="25000" name="range" value="12000"> </label><br/><br/>
+
+      <label >输入date: <input type="date" name="date" value="2016-01-01"></label><br/><br/>
+      <label >输入month: <input type="month" name="month"></label><br/><br/>
+      <label >输入week: <input type="week" name="week"></label><br/><br/>
+
+
+      <label >输入datetime: <input type="datetime" name="datetime" value=""></label><br/><br/>
+      <label >输入datetime-local: <input type="datetime-local" name="datetime-local" value=""></label><br/><br/>
+
+      <br/><br/>
+      <input type="submit" value="点击提交">
+    </form>
+
+  </body>
+</html>

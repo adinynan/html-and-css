@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css特殊继承</title>
+    <style>
+     a {
+       text-decoration: none;
+     }
+
+     .p1 {
+       color: green;
+     }
+     .p1 a {
+       color: green;
+     }
+
+     .p2 {
+       font-size: 50px;
+     }
+
+     .p2 h2 {
+       font-size: 20px;
+     }
+    </style>
+  </head>
+  <body>
+
+   <!-- a 标签的颜色不会继承  -->
+    <p class="p1">
+      p的文本颜色为绿色
+      <a href="https://www.baidu.com">链接标签的颜色继承问题</a>
+    </p>
+
+   <!-- h标签的字体大小受继承的影响非常小  -->
+   <!-- p标签中不可以嵌套h标签 -->
+    <div class="p2">
+      p2字体大小
+      <h2>h2的字体大小</h2>
+    </div>
+
+  </body>
+</html>

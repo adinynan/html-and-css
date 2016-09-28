@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>尚合网站</title>
+    <style>
+    /*去掉多数的默认margin,padding*/
+      html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{
+        margin:0;
+        padding:0;
+      }
+
+      body {
+        /*height: 2000px;*/
+      }
+
+       ul {
+         list-style: none;
+       }
+
+       a {
+         text-decoration: none;
+       }
+
+
+      .head {
+        width: 100%;
+        height: 117px;
+        background: url("./shanghe/head_bg.png") repeat-x;
+      }
+
+      .head-top {
+        width: 980px;
+        height: 67px;
+        margin: 0 auto;
+      }
+
+      .head-bottom {
+        width: 980px;
+        height: 50px;
+        margin: 0 auto;
+      }
+
+      .head-top .logo {
+        float: left;
+        padding-top: 19px;
+      }
+
+      .head-top .search {
+        float: right;
+        padding-top: 19px;
+      }
+
+      .search input {
+        float: left;
+      }
+      .search .search-text {
+        height: 28px;
+        width: 162px;
+        background: url("./shanghe/input_r1_c1.png") no-repeat;
+        border: none;/*去掉input默认的边框*/
+        outline-style: none; /*去掉input获得焦点时的边框*/
+        padding-left: 5px;
+      }
+
+     .head-bottom ul li {
+       width: 130px;
+       height: 50px;
+       line-height: 50px;
+       text-align: center;
+       float: left;
+     }
+
+     .head-bottom ul li a {
+       color: black;
+       font-weight: bolder;
+     }
+
+     .head-bottom ul li a:hover {
+       color: yellow;
+     }
+
+     .head-bottom li.top {
+       position: relative;
+     }
+
+     .head-bottom .top-new {
+       background: url("./shanghe/new.png") no-repeat;
+       width: 25px;
+       height: 20px;
+       position: absolute;/*当一个元素设置了绝对定位时，那么它就拥有了
+       行内块元素的特点，可以直接设置宽，高*/
+       top: -2px;
+       left: 50px;
+     }
+     .banner {
+       width: 980px;
+       margin: 0 auto;
+       position: relative;
+     }
+
+     .banner .taobao {
+       width: 115px;
+       height: 113px;
+       background: url("./shanghe/taobao.jpg");
+       position: absolute;
+       top: 0px;
+       right: -115px;
+     }
+
+
+     .point {
+       text-align: center;
+       margin: 15px;
+     }
+
+     .gonggao {
+       width: 100%;
+       height: 29px;
+       border-top: 1px solid  #d3d7d4;
+       border-bottom: 1px solid #d3d7d4;
+     }
+
+     .gonggao .shuoming {
+       width: 980px;
+       height: 100%;
+       margin: 0 auto;
+     }
+
+     .shuoming p {
+       float: left;
+       height: 29px;
+       line-height: 29px;
+     }
+     .shuoming p span {
+       font-weight: bolder;
+     }
+
+     .shuoming img {
+       float: right;
+       margin-top: 5px;
+     }
+
+     .clearfix {
+       zoom: 1;
+     }
+
+     .clearfix::after,
+     .clearfix::before {
+       content: "";
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+     }
+
+     .product {
+       width: 980px;
+       margin: 0 auto;
+       margin-top: 15px;
+     }
+
+     .news {
+       padding: 14px  12px  0 7px;
+       height: 212px;
+       float: left;
+       border: 1px solid gray;
+     }
+
+     .news h4 {
+       background: url("./shanghe/canvas_r4_c4.png") no-repeat left center;
+       padding-left: 13px;
+       color: green;
+     }
+
+     .product .left {
+       width: 290px;
+     }
+     .product .center {
+       width: 353px;
+       margin: 0 10px;
+     }
+
+    .product .center h4 span {
+      color: black;
+      font-weight: bolder;
+      float: right;
+    }
+
+    .product .center ul {
+      padding: 10px;
+      font-size: 13px;
+    }
+
+    .product .center ul li {
+      height: 27px;
+      line-height: 27px;
+      border-bottom: 1px dashed gray;
+    }
+
+    .product .center .color-red {
+      color: red;
+    }
+
+    .product .center .color-red:hover {
+      color: blue;
+    }
+
+    .product .center ul li a {
+      color: black;
+    }
+
+    .product .center ul li a:hover {
+      color: red;
+    }
+
+     .product .right{
+       width: 249px;
+     }
+
+     .product .right ul {
+       padding: 20px;
+       font-size: 14px;
+     }
+
+     .product .right ul li {
+       height: 14px;
+       border-left: 3px solid green;
+       margin: 10px 0;
+       padding-left: 3px;
+     }
+
+     .product .right ul li a {
+       color: black;
+     }
+     .product .right ul li a:hover {
+       color: red;
+     }
+
+     .product .right p {
+       font-size: 14px;
+       padding-left: 20px;
+     }
+
+     .foot {
+       height: 306px;
+       margin-top: 50px;
+       background: url("./shanghe/foot.png") repeat-x ;
+     }
+
+     .foot-top {
+       width: 980px;
+       margin: 0 auto;
+       font-size: 13px;
+     }
+
+     .foot-top dl {
+       float: left;
+       margin-top: 10px;
+       margin-right: 40px;
+     }
+     .foot-top dl dt {
+       color: #c7c7c7;
+       margin-bottom: 10px;
+     }
+
+     .foot-top dl dd a {
+       color: #666;
+     }
+
+     .foot-bottom {
+       width: 980px;
+       font-size: 13px;
+       text-align: center;
+       margin: 0 auto;
+       margin-top: 140px;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+        <div class="head-top">
+          <div class="logo">
+            <img src="./shanghe/logo.png" alt="">
+          </div>
+          <div class="search">
+            <input class="search-text" type="text">
+            <input type="image" src="./shanghe/input_r1_c2.png">
+          </div>
+        </div>
+        <div class="head-bottom">
+          <ul>
+            <li><a href="#">首页</a></li>
+            <li class="top">
+              <a href="#">智能手机</a>
+              <span class="top-new"></span>
+            </li>
+            <li><a href="#">平板电脑</a></li>
+            <li><a href="#">配件</a></li>
+            <li><a href="#">服务支持</a></li>
+            <li><a href="#">关于尚合</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="banner">
+      <img src="./shanghe/banner.png" alt="">
+      <span class="taobao"></span>
+    </div>
+    <div class="point">
+      <img src="./shanghe/point.png" alt="">
+    </div>
+    <div class="gonggao">
+      <div class="shuoming">
+        <p><span>最新公告：</span>快睡觉高考将公开接电话</p>
+        <img src="./shanghe/share.png" alt="">
+      </div>
+    </div>
+    <div class="product clearfix">
+      <div class="left news">
+        <h4>新闻发布</h4>
+      </div>
+      <div class="center news">
+        <h4>新闻中心<span><a href="#">更多</a></span></h4>
+        <ul>
+          <li><a href="#" class="color-red">致歉公告</a></li>
+          <li><a href="#">首批尚合Aonet已全部售馨!</a></li>
+          <li><a href="#">首批尚合Aonet已全部售馨!</a></li>
+          <li><a href="#">【媒体报导】国产高性价比 尚合Aonet四核手机评测</a></li>
+          <li><a href="#">尚合Aone智能手机入网证已经获工信部门审批下发</a></li>
+          <li><a href="#">我司通过ISO9001:2008国际质量管理体系认证.</a></li>
+        </ul>
+      </div>
+      <div class="right news">
+        <h4>技术支持</h4>
+        <ul>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">售后服务</a></li>
+        </ul>
+        <p>深圳市汇众科技发展有限公司</p>
+        <p>服务热线：400-633-7962</p>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot-top clearfix">
+        <dl>
+          <dt>尚合首页</dt>
+          <dd><a href="#">返回首页</a></dd>
+          <dd><a href="#">返回首页</a></dd>
+          <dd><a href="#">返回首页</a></dd>
+          <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+          <dt>尚合首页</dt>
+          <dd><a href="#">返回首页</a></dd>
+          <dd><a href="#">返回首页</a></dd>
+          <dd><a href="#">返回首页</a></dd>
+          <dd><a href="#">返回首页</a></dd>
+        </dl>
+      </div>
+      <div class="foot-bottom">
+        <p>
+          看见看见客户即可贷款将很快将很快都快结婚计划都结婚计划大家好 将很快杜鹃花开回家快点结婚<br/>
+          经营许可证号1u4ut9u9ti8e8uey
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

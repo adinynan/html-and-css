@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css的优先级</title>
+
+    <style>
+       p {
+         color: red;
+       }
+       .div-1 p {
+         color: blue;
+       }
+
+       .div-1 .div-2 p {
+         color: purple;
+       }
+
+       div div p {
+         color: green;
+       }
+
+
+       #divid-2 p {
+         color: #ff6745;
+       }
+
+      /*权重值相等时，最后的设置有效*/
+       #divid-1 p {
+         color: #897645;
+       }
+
+       #divid-1 #divid-2 p {
+         color: yellow;
+       }
+    </style>
+  </head>
+  <body>
+
+   <!--
+    行内style > id > class > 标签 > 继承 > 浏览器的默认属性, 当它们都应用于同一个元素
+      前提：应用于同一个元素上, css样式 = ids + classes + tags
+      有一个id = 100
+      有一个class = 10
+      有一个标签 tag = 1
+    -->
+
+    <div class="div-1" id="divid-1">
+      <div class="div-2" id="divid-2">
+        <p style="color:#663322;">p的文本颜色</p>
+      </div>
+    </div>
+  </body>
+</html>
